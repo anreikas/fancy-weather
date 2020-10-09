@@ -1,0 +1,81 @@
+.fut-forecast {
+  list-style: none;
+}
+
+.fut-forecast__item {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 500;
+
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+
+  @include sm() {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.fut-forecast__day {
+  grid-column: 1 / span 2;
+
+  @include xsm(){
+    padding-right: 5px;
+  }
+}
+
+.fut-forecast__temp {
+  position: relative;
+  padding-right: 20px;
+  font-size: 80px;
+  line-height: 1;
+  justify-self: flex-start;
+
+  @include sm() {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @include xsm() {
+    padding-right: 10px;
+    font-size: 20px !important;
+  }
+
+
+  &::after{
+    position: absolute;
+    content: '\00B0';
+    top: 5px;
+    right: 8px;
+    font-size: 50px;
+    line-height: 50px;
+
+    @include sm() {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    @include xsm() {
+      right: 4px;
+      font-size: 15px !important;
+    }
+
+  }
+}
+
+.fut-forecast__icon {
+  padding: 10px;
+  width: 65px;
+  height: 41px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include sm() {
+    padding: 0px;
+  }
+
+  @include xsm() {
+    width: 60px;
+  }
+}

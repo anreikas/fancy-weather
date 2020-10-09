@@ -1,0 +1,22 @@
+.popup{
+  background-color: rgba(0,0,0,0.9);
+
+  &--inActive{
+    display: none;
+  }
+}
+
+.popup__wrapper{
+  position: relative;
+  border-radius: $btnsBorderRadius;
+  padding: 10px;
+  border: 1px solid $firstColor;
+}
+
+.popup__btn{
+  position: absolute;
+  content: '';
+  right: 15px;
+  top: 15px;
+}
+

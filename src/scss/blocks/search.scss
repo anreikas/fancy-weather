@@ -1,0 +1,20 @@
+.search {
+  position: relative;
+  border-radius: $btnsBorderRadius;
+  overflow: hidden;
+}
+.search__input {
+  padding: 0 45px 0 15px;
+  box-sizing: border-box;
+  background-color: $thirdColor;
+  color: $firstColor;
+  border: none;
+
+  &:focus{
+    outline: none;
+  }
+
+  &::placeholder{
+    color: $firstColor;
+  }
+}

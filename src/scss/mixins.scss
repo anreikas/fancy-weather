@@ -1,0 +1,36 @@
+// media query mixins
+
+
+@mixin sm(){
+  @media screen and (max-width: $mdBreak - 0.1px){
+      @content;
+  }
+}
+
+@mixin md(){
+  @media screen and (max-width: $mdMedBreak - 0.1px){
+      @content;
+  }
+}
+
+@mixin mdMed(){
+  @media screen and (max-width: $lgMedBreak - 0.1px){
+      @content;
+  }
+}
+
+@mixin lg(){
+  @media screen and (max-width: $lgLgBreak - 0.1px){
+      @content;
+  }
+}
+
+@mixin xsm(){
+  @media screen and  (max-width: $smBreak - 0.1px){
+      @content;
+  }
+}
+
+
+
+

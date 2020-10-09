@@ -1,0 +1,121 @@
+.site-btn {
+  border: none;
+  font-size: 14px;
+  color: $firstColor;
+  font-weight: 500;
+  background-color: $secondColor;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+
+    &:hover{
+      cursor: pointer;
+      background-color: $fourthColor;
+    }
+
+    &:focus{
+      outline: none;
+    }
+
+    &--reloadBg{
+      background-image:  url('/assets/img/svg/site-icons/refreshBtn.svg'),
+      url('/assets/img/svg/site-icons/reload.svg');
+      border-radius: $btnsBorderRadius;
+      background-position:center, center;
+      background-repeat: no-repeat;
+      background-size: cover, 15px 20px ;
+    }
+
+    &--en,
+    &--ru,
+    &--be {
+      background-color: $fifthColor;
+
+      &:hover{
+        background-color: lighten($fifthColor, 30%);
+      }
+    }
+
+    &--temp {
+      background-color: $thirdColor;
+      position: relative;
+      padding-left: 5px;
+      &::before{
+        position: absolute;
+        content: '\00B0';
+        top: 15px;
+        left: 8px;
+        font-size: 22px;
+        line-height: 10px;
+      }
+
+    }
+
+    &--activeTemp {
+      background-color: $secondColor;
+    }
+
+    &--fahrenheit {
+      border-top-left-radius: $btnsBorderRadius;
+      border-bottom-left-radius: $btnsBorderRadius;
+    }
+
+    &--celsius {
+      border-top-right-radius: $btnsBorderRadius;
+      border-bottom-right-radius: $btnsBorderRadius;
+    }
+
+    &--speech {
+      background:  url('/assets/img/svg/site-icons/microphone.svg') center/ cover no-repeat;
+
+        &:hover{
+          background-color: transparent;
+          background-image:  url('/assets/img/svg/site-icons/microphone--white.svg');
+        }
+    }
+
+    &--activeSpeech{
+        &:after{
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          border: 2px solid $microphoneAnimationColor;
+          top: calc(50% - 10px);
+          left: calc(50% - 10px);
+          animation: pulse 2s infinite;
+        }
+    }
+
+    &--play,
+    &--close,
+    &--info{
+      border-radius: $btnsBorderRadius;
+      background-size: 50%;
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+
+
+    &--play {
+      background-image: url('/assets/img/svg/site-icons/play.svg');
+    }
+
+    &--info{
+      background-image: url('/assets/img/svg/site-icons/info.svg');
+    }
+
+    &--close{
+      background-image: url('/assets/img/svg/site-icons/close.svg');
+    }
+
+}
+
+
+@keyframes pulse{
+  to{
+    transform: scale(2);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,96 @@
+.cur-forecast__temp {
+  font-size: 306px;
+  line-height: 306px;
+  font-weight: bold;
+  position: relative;
+  padding-right: 50px;
+
+  @include sm(){
+    padding-right: 35px;
+    font-size: 200px;
+    line-height: 200px;
+  }
+
+  @include xsm(){
+    padding-right: 20px !important;
+    font-size: 80px !important;
+    line-height: 80px !important;
+  }
+
+    &::after{
+      position: absolute;
+      content: '\00B0';
+      top: 20px;
+      right: 5px;
+      font-size: 144px;
+      line-height: 144px;
+
+      @include sm(){
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      @include xsm(){
+        font-size: 40px !important;
+        line-height: 30px !important;
+        top: 5px;
+      }
+    }
+}
+
+.cur-forecast__weather-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cur-forecast__summary {
+  font-size: 22px;
+  font-weight: 500;
+
+  @include sm(){
+    font-size: 18px;
+  }
+}
+
+.cur-forecast__weather-type {
+  white-space: nowrap;
+}
+
+.cur-forecast__text {
+  padding-left: 1px;
+}
+
+.cur-forecast__name{
+  padding-right: 10px;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "\003A";
+    top: 0px;
+    right: 2px;
+    font-size: 22px;
+    @include sm() {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+.cur-forecast__sensation {
+  white-space: nowrap;
+}
+
+.cur-forecast__sensation-value {
+  position: relative;
+  padding-right: 10px;
+
+  &::after{
+    position: absolute;
+    content: "\00B0";
+    top: 7px;
+    right: 0;
+    font-size: 25px;
+    line-height: 10px;
+  }
+}

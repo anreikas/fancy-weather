@@ -1,0 +1,55 @@
+// switch state class
+
+.langs {
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  background-color: $secondColor;
+  border-radius: $btnsBorderRadius;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $fourthColor;
+  }
+
+  &::after{
+    position: absolute;
+    box-sizing: border-box;
+    content: '';
+    right: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% - 2px)) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $firstColor;
+    border-right: 2px solid $firstColor;
+  }
+
+  &:hover .langs__buttons{
+    visibility: visible;
+  }
+
+}
+
+.langs__current-lang {
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.langs__buttons {
+  width: 100%;
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: $btnsBorderRadius;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.langs__btn {
+  width: 100%;
+  padding: 5px 0;
+}
